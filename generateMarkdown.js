@@ -1,7 +1,5 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-    // let realLicense = data.license.split(" ").join('_');
-    // let realLicense = (data.license).join('_');
     return `
 
   ![License](https://img.shields.io/badge/License-${(data.license).split(" ").join("_")}-red)
@@ -15,7 +13,8 @@ function generateMarkdown(data) {
   ## Creator
 
   ${data.creator} <br>
-  <a href='https://github.com/${data.github}' target='_blank'> Github Page</a>
+  <a href='https://github.com/${data.github}' target='_blank'> Github Page</a><br>
+  <a href="${data.email}">You can email me here</a>
 
   
   ## Table of Contents
@@ -50,6 +49,7 @@ function generateMarkdown(data) {
    
   ${data.license}
 
+  ![License](https://img.shields.io/badge/License-${(data.license).split(" ").join("_")}-red)
 `;
 }
 

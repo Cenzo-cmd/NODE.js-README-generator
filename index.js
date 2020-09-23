@@ -25,6 +25,10 @@ function promptUser() {
             type: 'input',
             message: 'Enter your github user name. :',
             name: 'github'
+        }, {
+            type: 'input',
+            message: 'Enter your github email address. :',
+            name: 'email'
         },
         {
             type: 'input',

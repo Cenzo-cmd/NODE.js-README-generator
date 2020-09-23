@@ -19,8 +19,12 @@ function promptUser() {
         },
         {
             type: 'input',
-            message: 'Enter your github username',
+            message: 'Enter your name. :',
             name: 'creator'
+        }, {
+            type: 'input',
+            message: 'Enter your github user name. :',
+            name: 'github'
         },
         {
             type: 'input',
@@ -33,33 +37,35 @@ function promptUser() {
             name: 'usage'
         },
         {
-            type: 'checkbox',
-            message: 'Select a license. :',
-            choices: [
-                "None",
-                "1",
-                "2"
-            ],
-            name: 'license'
-        },
-        {
             type: 'input',
             message: 'Enter contribution guidelines. :',
-            name: 'contribution'
+            name: 'contributing'
         },
         {
             type: 'input',
             message: 'Enter test instructions. :',
             name: 'test'
+        },
+        {
+            type: 'list',
+            message: 'Select a license. :',
+            choices: [
+                "Apache License 2.0",
+                "MIT License",
+                "Boost Software License 1.0",
+                "Creative Commons Zero v1.0 Universal",
+                "Eclipse Public License 2.0",
+                "GNU Affero General Public License v3.0",
+                "GNU General Public License v2.0",
+                "GNU Lesser General Public License v2.1",
+                "Mozilla Public License 2.0",
+                "The Unlicense"
+            ],
+            name: 'license'
         }
 
     ]);
 }
-
-// function to write README file
-// function writeToFile(fileName, data) {
-
-// }
 
 // function to initialize program
 async function init() {

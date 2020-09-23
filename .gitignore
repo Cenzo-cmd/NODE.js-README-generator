@@ -1,6 +1,7 @@
 #ignore node modules folder
 /node_modules
 
+/index.js
 # Logs
 logs
 *.log

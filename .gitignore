@@ -1,7 +1,8 @@
 #ignore node modules folder
 /node_modules
 
-/index.js
+/README.md
+
 # Logs
 logs
 *.log

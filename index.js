@@ -1,7 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-const markdown = require('./generateMarkdown');
 const generateMarkdown = require('./generateMarkdown');
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -20,6 +19,11 @@ function promptUser() {
         },
         {
             type: 'input',
+            message: 'Enter your github username',
+            name: 'creator'
+        },
+        {
+            type: 'input',
             message: 'Enter installation instructions. :',
             name: 'install'
         },
@@ -27,16 +31,6 @@ function promptUser() {
             type: 'input',
             message: 'Enter usage information. : ',
             name: 'usage'
-        },
-        {
-            type: 'input',
-            message: 'Enter contribution guidelines. :',
-            name: 'contribution'
-        },
-        {
-            type: 'input',
-            message: 'Enter test instructions. :',
-            name: 'testInstructions'
         },
         {
             type: 'checkbox',
@@ -47,6 +41,16 @@ function promptUser() {
                 "2"
             ],
             name: 'license'
+        },
+        {
+            type: 'input',
+            message: 'Enter contribution guidelines. :',
+            name: 'contribution'
+        },
+        {
+            type: 'input',
+            message: 'Enter test instructions. :',
+            name: 'test'
         }
 
     ]);
